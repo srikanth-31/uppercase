@@ -1,0 +1,58 @@
+
+public class unittesting {
+        public static void main(String[] args) {
+            System.out.println(tc_1_allLowercase("phenom"));
+            System.out.println(tc_2_alluppercase("UNIT"));
+            System.out.println(tc_3_numbers("1175"));
+            System.out.println(tc_4_numbercombo("Ims1175"));
+            System.out.println(tc_5_specialchar("@#"));
+            System.out.println(tc_6_emptystring(""));
+            System.out.println(tc_7_mixed("SpartonS"));
+       
+        }
+        public static String toUpperCase(String str){
+            String s = "";
+            for(int i=0 ; i<str.length();i++){
+                if(Character.isLowerCase(str.charAt(i))){
+                    s += (char)(str.charAt(i)-32);
+                }
+                else{
+                    s += str.charAt(i)+"";
+                }
+            }
+            return s;
+        }
+        public static boolean tc_1_allLowercase(String str){
+            String Expected = "PHENOM";
+            return toUpperCase(str).equals(Expected);
+        }
+        public static boolean tc_2_alluppercase(String str){
+            String Expected = "UNIT";
+            return toUpperCase(str).equals(Expected);
+        }
+    
+        public static boolean tc_3_numbers(String str){
+            String Expected = "1175";
+            return toUpperCase(str).equals(Expected);
+        }
+        public static boolean tc_4_numbercombo(String str){
+            String Expected = "IMS1175";
+            return toUpperCase(str).equals(Expected);
+        }
+        public static boolean tc_5_specialchar(String str){
+            String Expected = "@#";
+            return toUpperCase(str).equals(Expected);
+        }
+        public static boolean tc_6_emptystring(String str){
+            String Expected = "";
+            return toUpperCase(str).equals(Expected);
+        }
+     
+        public static boolean tc_7_mixed(String str){
+            String Expected = "SPARTONS";
+            return toUpperCase(str).equals(Expected);
+        }
+    
+    
+    
+}
